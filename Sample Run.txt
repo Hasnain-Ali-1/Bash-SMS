@@ -1,0 +1,27 @@
+$ ./sms.sh send 123 456 "You are nice."
+$ ./sms.sh send 123 456 "Do you like me?"
+$ ./sms.sh send 456 123 "I like you."
+$ ./sms.sh send 123 789 "You are nice. Do you like me?" 
+$ ./sms.sh search 123
+The following results were found for 123:
+From 		To 		Message
+--------------------------------------
+123		456		You are nice.
+123		456		Do you like me?
+123		789		You are nice. Do you like me?
+$ ./sms.sh search 135
+No results found for 135
+$ ./sms.sh search you --message
+The following results were found for you:
+From 		To 		Message
+--------------------------------------
+123		456		Do you like me?
+456		123		I like you.
+123		789		You are nice. Do you like me?
+
+$ ./sms.sh remove 123
+
+Would you like to delete 123? (y/N)Y
+
+$ ./sms.sh help
+Your clever help text here
